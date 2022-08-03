@@ -10,8 +10,9 @@ The game is played until the player runs out of the total amount or until he dec
 #include <time.h>
 #define SHUFFLE 5 // number of position rotations
 
-void play(int bet); // function declaration
-int cash;           // global varaible to holds cash of the player
+void play(int bet);        // function declaration
+void swap(int *x, int *y); // function declaration
+int cash;                  // global varaible to holds cash of the player
 
 int main()
 {
@@ -79,4 +80,11 @@ void play(int bet) // function inizialization to shuffles positions
         printf("You Loose!!! Positions are: [%c] [%c] [%c] Total Cash = $%d\n", positions[0], positions[1], positions[2], cash);
     }
     free(positions); // deallocate memory
+}
+
+void swap(int *x, int *y) // function initialization to swap two numbers
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
 }
