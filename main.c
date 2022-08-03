@@ -8,8 +8,8 @@ The game is played until the player runs out of the total amount or until he dec
 #include <stdio.h>
 #include <stdlib.h>
 
-void play(int bet);// function declaration
-int cash = 20; // global varaible to holds cash of the player
+void play(int bet); // function declaration
+int cash = 20;      // global varaible to holds cash of the player
 
 int main()
 {
@@ -26,7 +26,7 @@ int main()
             break;
         }
 
-        play(bet);// call function to play
+        play(bet); // call function to play
     }
 
     return 0;
@@ -34,5 +34,20 @@ int main()
 
 void play(int bet) // function inizialization to shuffles positions
 {
-  
+    char positions[3] = {'X', 'O', 'X'}; // array to hold positions of the ball
+    printf("\nShuffling positions...\n");
+    
+    srand(time(NULL)); // seeding random number generator
+
+    for (int i = 0; i < 5; i++)
+    {
+        // using random() function to shuffles positions
+        int x = rand() % 3;
+        int y = rand() % 3;
+
+        // swap characters at positions x and y
+        int temp = positions[x];
+        positions[x] = positions[y];
+        positions[y] = temp;
+    }
 }
