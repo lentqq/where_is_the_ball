@@ -2,7 +2,7 @@
 
 ## Overview
 
-Simple game, build with __C__ language. The game have one __main()__ method and one __play()__ function to shuffles positions and calculate how many "cash" you have. I`m using __char pionter__ to hold positions of the ball. With the __malloc()__ function i am allocate dynamically memory in the __HEAP__ and the end of the function using __free()__ function to deallocated this memory. To generate the positions I use a __random() generator__.
+Simple game, build with __C__ language. The game have one __main()__ method and one __play()__ function to shuffles positions and calculate how many "cash" you have. I`m using __char pionter__ to hold positions of the ball. With the __malloc()__ function i am allocate dynamically memory in the __HEAP__ and at the end of the function using __free()__ function to deallocated this memory. To generate the positions I use a __random() generator__.
 
 ## Features
 
