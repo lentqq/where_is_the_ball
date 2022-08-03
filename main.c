@@ -11,7 +11,7 @@ The game is played until the player runs out of the total amount or until he dec
 #define shuffle 5
 
 void play(int bet); // function declaration
-int cash;      // global varaible to holds cash of the player
+int cash;           // global varaible to holds cash of the player
 
 int main()
 {
@@ -41,7 +41,13 @@ int main()
 
 void play(int bet) // function inizialization to shuffles positions
 {
-    char positions[3] = {'X', 'O', 'X'}; // array to hold positions of the ball
+    /* array of chars to hold positions of the ball
+    and dynamically  allocated memory for each of the positions*/
+    char *positions = (char *)malloc(3 * sizeof(char));
+    positions[0] = 'X';
+    positions[1] = 'O';
+    positions[2] = 'X';
+
     printf("\nShuffling positions...\n");
 
     srand(time(NULL)); // seeding random number generator
@@ -72,4 +78,5 @@ void play(int bet) // function inizialization to shuffles positions
         cash -= bet;
         printf("You Loose!!! Positions are: [%c] [%c] [%c] Total Cash = $%d\n", positions[0], positions[1], positions[2], cash);
     }
+    free(positions); // deallocate memory
 }
