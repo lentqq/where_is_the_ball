@@ -8,7 +8,7 @@ The game is played until the player runs out of the total amount or until he dec
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define shuffle 5
+#define SHUFFLE 5 // number of position rotations
 
 void play(int bet); // function declaration
 int cash;           // global varaible to holds cash of the player
@@ -52,7 +52,7 @@ void play(int bet) // function inizialization to shuffles positions
 
     srand(time(NULL)); // seeding random number generator
 
-    for (int i = 0; i < shuffle; i++)
+    for (int i = 0; i < SHUFFLE; i++)
     {
         // using random() function to shuffles positions
         int x = rand() % 3;
