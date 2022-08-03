@@ -11,12 +11,14 @@ The game is played until the player runs out of the total amount or until he dec
 #define shuffle 5
 
 void play(int bet); // function declaration
-int cash = 20;      // global varaible to holds cash of the player
+int cash;      // global varaible to holds cash of the player
 
 int main()
 {
     int bet;
-    printf("\n**Welcome to the game**\n");
+    printf("\n*** Welcome to the game ***\n");
+    printf("\nPlease enter the cash you wish to play with: ");
+    scanf("%d", &cash);
     printf("\nTotal cash is = $%d\n", cash);
 
     while (cash > 0)
@@ -26,7 +28,7 @@ int main()
 
         if (bet == 0 || bet > cash)
         {
-            printf("You don't have enough money in your account!!!");
+            printf("\nYou don't have enough money in your account!!!\n");
             break;
         }
 
