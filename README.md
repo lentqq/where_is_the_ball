@@ -2,7 +2,7 @@
 
 ## Overview
 
-Simple game, build with __C__ language. The game have one __main()__ method and one __play()__ function to shuffles positions and clculate how many "cash" you have. I`m using __char pionter__ to hold positions of the ball. With the __malloc()__ function i am allocate dynamically memory in the __HEAP__ and the end of the function using __free()__ function to deallocated this memory. To generate the positions I use a __random() generator__.
+Simple game, build with __C__ language. The game have one __main()__ method and one __play()__ function to shuffles positions and calculate how many "cash" you have. I`m using __char pionter__ to hold positions of the ball. With the __malloc()__ function i am allocate dynamically memory in the __HEAP__ and the end of the function using __free()__ function to deallocated this memory. To generate the positions I use a __random() generator__.
 
 ## Features
 
@@ -21,7 +21,7 @@ $ git clone https://github.com/lentqq/where_is_the_ball.git
 
 ## How to start
 
-You need to have some kind of __IDE__ with the compiler for the c installerlanguage installed. I use [Visual Studio Code](https://code.visualstudio.com/download) and the [MinGW - Minimalist GNU for Windows](https://sourceforge.net/projects/mingw/) or [MinGW-w64](https://www.mingw-w64.org/) compiler.
+You need to have some kind of __IDE__ with the compiler for the __C__ language installed. I use [Visual Studio Code](https://code.visualstudio.com/download) and the [MinGW - Minimalist GNU for Windows](https://sourceforge.net/projects/mingw/) or [MinGW-w64](https://www.mingw-w64.org/) compiler.
 
 To start, enter in terminal(__CMD__, __PowerShell__...):
 * gcc .\main.c
