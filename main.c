@@ -16,6 +16,8 @@ int cash = 20;      // global varaible to holds cash of the player
 int main()
 {
     int bet;
+    printf("\n**Welcome to the game**\n");
+    printf("\nTotal cash is = $%d\n", cash);
 
     while (cash > 0)
     {
@@ -29,6 +31,7 @@ int main()
         }
 
         play(bet); // call function to play
+        printf("\n************************************************************\n");
     }
 
     return 0;
@@ -51,5 +54,20 @@ void play(int bet) // function inizialization to shuffles positions
         int temp = positions[x];
         positions[x] = positions[y];
         positions[y] = temp;
+    }
+
+    int playerGuess; // varaible to holds which position the player has chosen
+    printf("\nWhat`s the position of the ball - 1st, 2nd or 3rd? ");
+    scanf("%d", &playerGuess);
+
+    if (positions[playerGuess - 1] == 'O')
+    {
+        cash += 2 * bet;
+        printf("You Guessed!!! Positions are: [%c] [%c] [%c] Total Cash = $%d\n", positions[0], positions[1], positions[2], cash);
+    }
+    else
+    {
+        cash -= bet;
+        printf("You Loose!!! Positions are: [%c] [%c] [%c] Total Cash = $%d\n", positions[0], positions[1], positions[2], cash);
     }
 }
