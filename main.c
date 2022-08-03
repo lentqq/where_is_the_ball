@@ -1,5 +1,5 @@
-/* Where is the ball - a simple C game
-We have three ball positions. The computer shuffles the positions and the player has to guess which position the ball is in.
+/* "Where is the ball" - a simple C game
+We have three ball positions [X][O][X], where the 'O' is the ball. The computer shuffles the positions and the player has to guess which position the ball is in.
 The player has a certain amount and on each shuffle of the positions bets a part of this amount.
 If he guesses the position of the ball, the amount he has bet is doubled, and if he does not guess he loses the amount he has bet.
 The game is played until the player runs out of the total amount or until he decides to end the game.
